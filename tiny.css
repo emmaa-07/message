@@ -53,6 +53,8 @@ p{
     color: #4f0f09;
     margin: 20px 0;
     line-height: 1.8;
+    animation: text 1s ease-in-out;
+
 }
 span{
     font-weight: bolder;
@@ -99,5 +101,13 @@ btn{
     }
     100% {
         transform: scale(1.1);
+    }
+}
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

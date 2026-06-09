@@ -1,6 +1,7 @@
 window.onload = function() {
-    let btn = document.getElementById('btn');
-    let card = document.getElementById('card');
+    const btn = document.getElementById('btn');
+    const card = document.getElementById('card');
+
 
     btn.addEventListener('click', () => {
         btn.style.display = 'none';
