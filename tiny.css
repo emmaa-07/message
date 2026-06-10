@@ -73,15 +73,12 @@ a{
     width: 120px;
     height: 80px;
     border: none;
-    animation: beat 0.5s linear infinite alternate;
+    animation: beat 0.5s alternate-reverse infinite;
     background-image: url('Media/letter.png');
     background-size: cover;
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
     
-}
-btn{
-    bottom: 20px;
 }
 
 /*animations*/
