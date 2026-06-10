@@ -9,15 +9,30 @@ body{
     user-select: none;
     font-family: 'Pixel', sans-serif;
 }
-.container {
+/*background*/
+
+#container {
+    background: linear-gradient(270deg, #fbd8de, #f0c3d2, #e6879a, #e36662);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background-image: url(Media/background.jpg);
-    background-size: cover;
 }
+
+#btn{
+    width: 120px;
+    height: 80px;
+    border: none;
+    animation: beat 0.5s alternate-reverse infinite;
+    background-image: url('Media/letter.png');
+    background-size: cover;
+    cursor: pointer;
+    
+}
+
 #card{
     display: none;
     width: 75%;
@@ -66,22 +81,17 @@ img{
 }
 a{
     color: #551b8c;
-
-}
-
-#btn{
-    width: 120px;
-    height: 80px;
-    border: none;
-    animation: beat 0.5s alternate-reverse infinite;
-    background-image: url('Media/letter.png');
-    background-size: cover;
-    cursor: pointer;
-    transition: opacity 0.2s ease-in-out;
-    
 }
 
 /*animations*/
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
 @keyframes fadein {
     0% {
         opacity: 0;
@@ -92,14 +102,6 @@ a{
         transform: translateY(0);
     }
 }
-@keyframes beat {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
 @keyframes text {
     0% {
         opacity: 0;
@@ -107,4 +109,10 @@ a{
     100% {
         opacity: 1;
     }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
