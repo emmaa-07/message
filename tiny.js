@@ -32,7 +32,7 @@ window.onload = function() {
     setInterval(createLeaf,400)
     
     btn.addEventListener('click', () => {
-        
+        document.getElementById("btw").style.display = "none"
         btn.style.display = 'none';
         card.style.display = 'block';
 

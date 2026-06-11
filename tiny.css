@@ -15,6 +15,7 @@ body{
     position: fixed;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -31,6 +32,7 @@ body{
     background-image: url('Media/Flower.png');
     background-size: cover;
     cursor: pointer;
+
     
 }
 
@@ -144,4 +146,10 @@ a{
     background-size: cover;
     pointer-events: none;
     animation: fall linear forwards;
+}
+#btw{
+    color: #fff;
+    top: 90%;
+    font-weight: bolder;
+    text-shadow: 0 0 5px #e65e65;
 }
