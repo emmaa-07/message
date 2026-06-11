@@ -12,22 +12,23 @@ body{
 /*background*/
 
 #container {
-    background: linear-gradient(270deg, #fbd8de, #f0c3d2, #e6879a, #e36662);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
+    position: fixed;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 100vh;
+    background-image: url(Media/Background.jpg);
+    background-size: cover;
 }
 
 #btn{
-    width: 120px;
-    height: 80px;
+    width: 80px;
+    height: 100px;
     border: none;
     animation: beat 0.5s alternate-reverse infinite;
-    background-image: url('Media/letter.png');
+    background-image: url('Media/Flower.png');
     background-size: cover;
     cursor: pointer;
     
@@ -38,14 +39,14 @@ body{
     width: 75%;
     height: 400px;
     background-color: #fde8ea;
-    border: 6px solid #ce5450;
+    border: 6px solid #e65e65;
     box-shadow:
         inset 5px 5px #fff3f6,
         inset -5px -5px #fff3f6,
-        5px 0 #9c1e13,
-        0 6px #9c1e13,
-            -5px 0px #9c1e13,
-        0px -5px #9c1e13, 0 0 20px #9c1e13;
+        5px 0 #f97c83,
+        0 6px #f97c83,
+            -5px 0px #f97c83,
+        0px -5px #f97c83, 0 0 20px #f97c83;
     image-rendering: pixelated;
     animation: fadein 0.8s ease-in-out;
 }
@@ -61,8 +62,8 @@ body{
 }
 h1{
     margin: 30px 0 0px 0;
-    color: #ce5450;
-    text-shadow: 0px 2px #9c1e13;
+    color: #f97c83;
+    text-shadow: 0px 2px #e34d54;
 }
 p{
     color: #4f0f09;
@@ -86,10 +87,10 @@ a{
 /*animations*/
 @keyframes beat {
     0% {
-        transform: scale(1);
+        transform: translateY(0px);
     }
     100% {
-        transform: scale(1.1);
+        transform: translateY(10px);
     }
 }
 @keyframes fadein {
@@ -110,9 +111,37 @@ a{
         opacity: 1;
     }
 }
+@keyframes bg {
+    0%{
+        background-position: 0%;
+    }
+    50%{
+        background-position: 50%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes fall {
+    from {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateX(var(--drift))
+            translateY(110vh)
+            rotate(360deg);
+    }
+}
+.leaf {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    height: 30px;
+    width: 20px;
+    background-size: cover;
+    pointer-events: none;
+    animation: fall linear forwards;
 }
