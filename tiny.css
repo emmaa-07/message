@@ -20,7 +20,7 @@ body{
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background-image: url(Media/landscape.jpg);
+    background-image: url('Media/landscape.jpg');
     background-size: cover;
 }
 
@@ -38,6 +38,7 @@ body{
 
 #card{
     display: none;
+    margin-top: -25%;
     width: 75%;
     height: 400px;
     background-color: #fde8ea;
@@ -71,7 +72,7 @@ p{
     color: #4f0f09;
     margin: 20px 0;
     line-height: 1.8;
-    animation: text 1s ease-in-out;
+    animation: textanimation 1s ease-in-out;
 
 }
 span{
@@ -105,7 +106,7 @@ a{
         transform: translateY(0);
     }
 }
-@keyframes text {
+@keyframes textanimation {
     0% {
         opacity: 0;
     }
@@ -151,5 +152,5 @@ a{
     color: #fff;
     top: 90%;
     font-weight: bolder;
-    text-shadow: 0 0 5px #e65e65;
+    text-shadow: 0 0 10px #e65e65, 0 0 5px #e02a33;
 }
