@@ -69,13 +69,13 @@ body{
     text-align: center;
 }
 h1{
-    margin: 15px 0 0px 0;
+    margin: 10px 0 0px 0;
     color: #f97c83;
     text-shadow: 0px 2px #e34d54;
 }
 p{
     color: #4f0f09;
-    margin: 20px 0;
+    margin: 18px 0;
     line-height: 1.8;
     animation: textanimation 1s ease-in-out;
 
